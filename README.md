@@ -147,8 +147,7 @@ void main() {
   print(text2.isNullOrEmpty()); // false
 }
 ```
-<img width="1904" height="859" alt="image" src="https://github.com/user-attachments/assets/ff15030e-fee1-423f-b7b3-333db7573cc9" />
-<img width="1906" height="908" alt="image" src="https://github.com/user-attachments/assets/1fb6c78e-b988-42aa-a065-6b1dc45de272" />
+
 [Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/f2fa765f693d687baece19aad862ce5e)
 
 ## 🔹 Generic Extensions
