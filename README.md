@@ -1,4 +1,4 @@
-# 📘 Rangkuman Materi: Extension Methods (Dart)
+# 📘 Rangkuman Materi: Extension Methods 
 
 ## 👤 Identitas
 ### Nama       : Aneka Lisda 
@@ -14,6 +14,7 @@ Extension Methods adalah fitur dalam Dart yang memungkinkan kita menambahkan met
 ---
 
 ## 🔹 Masalah Tanpa Extension Methods
+Masalah Tanpa Extension Methods adalah kondisi ketika kita ingin menambahkan fungsi ke tipe data yang sudah ada, tetapi harus membuat fungsi terpisah (di luar class) sehingga penggunaannya menjadi kurang praktis dan tidak efisien.
 Tanpa extension, kita harus membuat fungsi terpisah:
 
 ```dart
@@ -36,6 +37,9 @@ void main() {
 ### Tidak bisa dipanggil langsung dari object
 ---
 ## 🔹 Solusi dengan Extension Methods
+Solusi dengan Extension Methods adalah cara untuk mengatasi keterbatasan tanpa extension dengan menambahkan fungsi langsung ke tipe data yang sudah ada, sehingga fungsi tersebut bisa dipanggil seperti method bawaan.
+
+Dengan menggunakan extension methods, kita tidak perlu lagi membuat fungsi terpisah di luar class. Sebaliknya, kita bisa menambahkan method ke tipe data seperti String, int, atau class lain, sehingga kode menjadi lebih rapi, mudah dibaca, dan lebih praktis digunakan.
 ```dart
 extension StringExtension on String {
   String capitalize() {
@@ -52,8 +56,8 @@ void main() {
 ### Lebih rapi
 ### Lebih mudah digunakan
 ---
-## 🔹 Sintaks Extension
-Sintaks Extension di Dart adalah cara untuk menambahkan method (fungsi baru) ke tipe data yang sudah ada (seperti String, int, dll) tanpa mengubah class aslinya.
+## 🔹 Sintaks Extension Methods
+Sintaks Extension Methods di Dart adalah cara untuk menambahkan method (fungsi baru) ke tipe data yang sudah ada (seperti String, int, dll) tanpa mengubah class aslinya.
 Secara sederhana, maksud dari sintaks ini adalah:
 kita bisa “menyisipkan” kemampuan tambahan ke suatu tipe data agar bisa digunakan seperti method bawaan.
 ### berikut contohnya :
@@ -77,15 +81,51 @@ void main() {
 
 ---
 ## 🔹 Tipe yang Bisa Di-extend
-### String
-### int
-### double
-### List
-### Custom Class
----
-## 🔹 Extension untuk Null Safety
-Extension untuk Null Safety dalam Dart adalah penggunaan extension method pada tipe data yang bisa bernilai null (nullable), seperti String?, untuk menangani kondisi null dengan aman tanpa menyebabkan error.
+### 1. Built-in types: String , int , double , List , Map , etc.
+### 2. Custom classes: Kelas buatan sendiri
+### 3. Generic types: List<T> , Map<K, V>
+### 4. Nullable types: String? , int?
+#### Kita bisa menambahkan fungsi baru ke tipe bawaan (int) tanpa mengubah class aslinya.
 ```dart
+extension IntExtension on int {
+  int kuadrat() {
+    return this * this;
+  }
+}
+
+void main() {
+  print(5.kuadrat()); // Output: 25
+}
+```
+
+<img width="1910" height="512" alt="image" src="https://github.com/user-attachments/assets/04896901-fa59-4b41-8a32-9ca3999474e7" />
+
+---
+## 🔹 Praktik -1 Utilities untuk Dart Types
+Utilities untuk Dart types adalah kumpulan fungsi tambahan (biasanya menggunakan extension methods) yang dibuat untuk membantu mempermudah penggunaan tipe data bawaan Dart seperti String, int, List, dll.
+
+Secara sederhana:
+
+Utilities ini berisi “alat bantu” agar kita tidak perlu menulis kode berulang-ulang saat mengolah data.
+
+Contoh menggunakan String Utilities : 
+```dart
+// String Utilities
+extension StringUtils on String {
+  String capitalize() {
+    if (this.isEmpty) return this;
+    return this[0].toUpperCase() + this.substring(1);
+  }
+}
+
+// List Utilities
+extension ListUtils<T> on List<T> {
+  T? firstOrNull() {
+    return isEmpty ? null : first;
+  }
+}
+
+// Nullable Utilities
 extension NullableString on String? {
   bool isNullOrEmpty() {
     return this?.isEmpty ?? true;
@@ -93,20 +133,25 @@ extension NullableString on String? {
 }
 
 void main() {
-  String? text1 = null;
-  String? text2 = "";
-  String? text3 = "hello";
+  // String
+  print("hello".capitalize()); // Hello
 
-  print(text1.isNullOrEmpty()); // true
-  print(text2.isNullOrEmpty()); // true
-  print(text3.isNullOrEmpty()); // false
+  // List
+  print([1, 2, 3].firstOrNull()); // 1
+  print([].firstOrNull()); // null
+
+  // Nullable
+  String? text = null;
+  print(text.isNullOrEmpty()); // true
+
+  String? text2 = "dart";
+  print(text2.isNullOrEmpty()); // false
 }
 ```
-<img width="954" height="278" alt="image" src="https://github.com/user-attachments/assets/b423c465-bc59-454d-ba56-e8d016a17081" />
+<img width="1904" height="859" alt="image" src="https://github.com/user-attachments/assets/ff15030e-fee1-423f-b7b3-333db7573cc9" />
+<img width="1906" height="908" alt="image" src="https://github.com/user-attachments/assets/1fb6c78e-b988-42aa-a065-6b1dc45de272" />
 
----
-
-## Generic Extensions
+## 🔹 Generic Extensions
 Generic Extensions pada Dart adalah extension method yang dibuat menggunakan tipe generik (T) sehingga bisa digunakan pada berbagai tipe data, bukan hanya satu tipe tertentu.
 ```dart
 extension ListExtension<T> on List<T> {
@@ -204,6 +249,18 @@ void main() {
 <img width="959" height="299" alt="image" src="https://github.com/user-attachments/assets/ae37c665-4883-4fba-93b3-7b490f6ae8f1" />
 
 ---
+## 🔹 Praktiit 2 - Validator Extensions
+Validator Extensions adalah extension method di Dart yang digunakan untuk memvalidasi data (mengecek apakah suatu nilai valid atau tidak), biasanya pada tipe seperti String, int, atau lainnya.
+
+Tujuannya:
+
+Membuat proses pengecekan data (seperti email, password, dll) jadi lebih mudah, rapi, dan bisa dipanggil seperti method biasa.
+
+<img width="1873" height="775" alt="image" src="https://github.com/user-attachments/assets/82f1c5f7-48bc-4ba7-81ef-f58c70abf1da" />
+<img width="1919" height="884" alt="image" src="https://github.com/user-attachments/assets/271633e1-494d-4605-b5b5-0a376d0df348" />
+
+
+
 ## 🎯 Kesimpulan
 
 Extension Methods membantu membuat kode lebih rapi, reusable, dan mudah digunakan tanpa harus mengubah class asli. Fitur ini sangat berguna dalam pengembangan aplikasi modern menggunakan Dart.
