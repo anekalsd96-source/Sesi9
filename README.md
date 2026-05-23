@@ -30,8 +30,7 @@ void main() {
   print(hasil); // Output: Hello world
 }
 ```
-<img width="959" height="301" alt="image" src="https://github.com/user-attachments/assets/246d45ec-a0b9-4490-aebf-f759f51aa53e" />
-
+[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/7b67fd82ab6f9c897292b902e2d0e1ba)
 ## Kekurangan:
 ### Tidak praktis
 ### Tidak bisa dipanggil langsung dari object
@@ -249,7 +248,7 @@ void main() {
 <img width="959" height="299" alt="image" src="https://github.com/user-attachments/assets/ae37c665-4883-4fba-93b3-7b490f6ae8f1" />
 
 ---
-## 🔹 Praktiit 2 - Validator Extensions
+## 🔹 Praktik -2 - Validator Extensions
 Validator Extensions adalah extension method di Dart yang digunakan untuk memvalidasi data (mengecek apakah suatu nilai valid atau tidak), biasanya pada tipe seperti String, int, atau lainnya.
 
 Tujuannya:
