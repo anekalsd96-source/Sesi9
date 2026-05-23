@@ -49,7 +49,7 @@ void main() {
   print("hello".capitalize());
 }
 ```
-[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/a51d99c84303a8b6e7d8fbb3a0c97cb1)
+[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/78768ecb582231d9ad30678e2e51bb78)
 
 ## Kelebihan:
 ### Lebih rapi
