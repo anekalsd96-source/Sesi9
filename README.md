@@ -76,7 +76,7 @@ void main() {
   print(teks.capitalize()); // Output: Hello dart
 }
 ```
-<img width="959" height="286" alt="image" src="https://github.com/user-attachments/assets/61668597-df86-4b5a-9c85-3a99b189e425" />
+[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/5561882bafd106d140f177d44a3671fe)
 
 ---
 ## 🔹 Tipe yang Bisa Di-extend
