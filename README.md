@@ -255,10 +255,40 @@ Tujuannya:
 
 Membuat proses pengecekan data (seperti email, password, dll) jadi lebih mudah, rapi, dan bisa dipanggil seperti method biasa.
 
-<img width="1873" height="775" alt="image" src="https://github.com/user-attachments/assets/82f1c5f7-48bc-4ba7-81ef-f58c70abf1da" />
-<img width="1919" height="884" alt="image" src="https://github.com/user-attachments/assets/271633e1-494d-4605-b5b5-0a376d0df348" />
+```dart
+// Extension untuk validasi String
+extension Validator on String {
+  bool isEmail() {
+    return contains("@") && contains(".");
+  }
 
+  bool isStrongPassword() {
+    return length >= 6;
+  }
 
+  bool isNumeric() {
+    return double.tryParse(this) != null;
+  }
+}
+
+void main() {
+  String email = "test@gmail.com";
+  String password = "123456";
+  String number = "123";
+
+  print(email.isEmail()); // true
+  print(password.isStrongPassword()); // true
+  print(number.isNumeric()); // true
+
+  // contoh tidak valid
+  print("testgmail.com".isEmail()); // false
+  print("123".isStrongPassword()); // false
+  print("abc".isNumeric()); // false
+}
+```
+[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/5f6bf713b57ad20d4c3f0d4135086161)
+
+---
 
 ## 🎯 Kesimpulan
 
