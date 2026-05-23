@@ -97,7 +97,7 @@ void main() {
 }
 ```
 
-<img width="1910" height="512" alt="image" src="https://github.com/user-attachments/assets/04896901-fa59-4b41-8a32-9ca3999474e7" />
+[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/2bb527255c9c11b2fe3522f7ed7d656c)
 
 ---
 ## 🔹 Praktik -1 Utilities untuk Dart Types
@@ -149,6 +149,7 @@ void main() {
 ```
 <img width="1904" height="859" alt="image" src="https://github.com/user-attachments/assets/ff15030e-fee1-423f-b7b3-333db7573cc9" />
 <img width="1906" height="908" alt="image" src="https://github.com/user-attachments/assets/1fb6c78e-b988-42aa-a065-6b1dc45de272" />
+[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/f2fa765f693d687baece19aad862ce5e)
 
 ## 🔹 Generic Extensions
 Generic Extensions pada Dart adalah extension method yang dibuat menggunakan tipe generik (T) sehingga bisa digunakan pada berbagai tipe data, bukan hanya satu tipe tertentu.
