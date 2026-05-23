@@ -49,7 +49,7 @@ void main() {
   print("hello".capitalize());
 }
 ```
-<img width="959" height="332" alt="image" src="https://github.com/user-attachments/assets/5951e76e-1a74-47d1-9875-0e5ceb58ce97" />
+[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/a51d99c84303a8b6e7d8fbb3a0c97cb1)
 
 ## Kelebihan:
 ### Lebih rapi
