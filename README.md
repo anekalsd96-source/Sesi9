@@ -167,7 +167,7 @@ void main() {
   print(kosong.firstOrNull()); // Output: null
 }
 ```
-<img width="956" height="282" alt="image" src="https://github.com/user-attachments/assets/5f4a2840-6b3f-49cb-b646-6dfceb3a3d0d" />
+[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/9d190c175534fb7da83885aaa50960c4)
 
 ---
 ## 🔹 Unnamed Extensions
@@ -183,7 +183,7 @@ void main() {
   print(text.shout()); // Output: HELLO DART
 }
 ```
-<img width="959" height="272" alt="image" src="https://github.com/user-attachments/assets/6c3f8035-1e34-4df1-add6-ac02239906a8" />
+[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/2a5194bf08de5e42592a42442aefb09e)
 
 ## ⚠️ Catatan penting
 ### Unnamed extension:
@@ -213,7 +213,7 @@ void main() {
   print(B(text).test()); // Output: B
 }
 ```
-<img width="955" height="278" alt="image" src="https://github.com/user-attachments/assets/91a9893c-22ae-4159-8302-10eca23fd90c" />
+[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/69cd4b119fabb9bcb89371203b9ae23a)
 
 ## 🔍 Penjelasan singkat
 ### Ada 2 extension dengan method sama: test()
@@ -245,7 +245,7 @@ void main() {
   print(user.sayHello()); // Output: Hello, Aneka
 }
 ```
-<img width="959" height="299" alt="image" src="https://github.com/user-attachments/assets/ae37c665-4883-4fba-93b3-7b490f6ae8f1" />
+[Klik di sini untuk menjalankan kode DartPad](https://dartpad.dev/69ec982eb7c59d233a0e28c3a6070f75)
 
 ---
 ## 🔹 Praktik -2 - Validator Extensions
